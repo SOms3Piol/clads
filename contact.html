@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.jpeg" type="image/x-icon">
+    <title>Contact Us | Welcome to CLADS - Cloud and Data Security </title>
+    <link  rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script defer  src="https://kit.fontawesome.com/00e77377ee.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/contact.css">
+
+    <style>
+        footer ul{
+            flex-wrap: wrap;
+        }
+    </style>
+
+   
+</head>
+<body>
+    
+
+    <header>
+        <nav>
+            <div class="lg-img">
+                <div>
+                    <img src="assets/logo.jpeg" alt="Company logo">
+                </div>
+                <a href="/">
+                    Home
+                </a>
+                <a href="/about.html">
+                    About Us
+                </a>
+                <a href="/service.html">
+                    Services
+                </a>
+                <a href="/blogs.html">Blogs</a>
+            </div>
+            <div class="lg-nav-links">
+                <div>
+            
+                <a href="https://facebook.com"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="/contact.html" id="contact-us-btn">Contact Us</a>
+            </div>
+            <div class="mbl-img">
+
+                    <img src="assets/logo.jpeg" alt="Company logo">
+            
+            </div>
+            <button id="mbl-button" class="mbl-button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul id="mbl-menu" class="mbl-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About US</a></li>
+                <li><a href="/service.html">Services</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+                <li><a href="/blogs.html">Blogs</a></li>
+               
+            </ul>
+        </nav>
+
+    </header>
+
+    <section class="section-contact" style="margin-top: 105px;">
+        <div class="head-services"> 
+            <p>CONTACT US</p>
+            <div style="height: 1px;width:100%;background:black"></div>
+        </div>
+        <div class="head-label">
+            <h1>Lets Talk!</h1>
+        </div>
+        <div class="contact-grid">
+            <div class="info-block">
+               
+                <p style="font-size: 20px; margin: 8px 0;">If you have any questions or need assistance, feel free to reach out to us. We're here to help with any of the services we offer and ensure you get the support you need to achieve your goals. Send us a message, and our team will be happy to assist you in every step of the way.</p>
+                <h1>+1 (571) 335-5962</h1>
+                <div class="icons-group animation-card">
+                  
+                    <a href="https://facebook.com" target="_blank" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+                    
+                </div>
+            </div>
+            <form action="mailto:info@clads.io" method="post" enctype="text/plain" class="contact-form animation-card card-1" onsubmit="return prepareEmail()">
+                <div>
+                    <input type="text" placeholder="Name" name="name" id="name" required>
+                    <input type="email" placeholder="Email Address" name="email" id="email" required>
+                </div>
+                <div>
+                    <input type="number" style="appearance: text-input;" placeholder="Phone" name="phone" id="phone" required>
+                    <input type="text" placeholder="Subject or Service" name="subject" id="subject" required>
+                </div>
+                <div>
+                    <textarea name="query" id="query" placeholder="Got Any Question? Type your Query" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    
+    </section>
+
+
+    <footer>
+        <div>
+            <img src="./assets/logo.jpeg" width="90px" height="90px" alt="company logo">
+            <p>Thank you for choosing CLADS - your partner in cloud and data security.</p>
+        </div>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/service.html">Services</a></li>
+            <li><a href="/blogs.html">Blogs</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+            
+        </ul>
+        <div>
+            <h2>Subscribe For More Latest Information By Us.</h2>
+            <form id="signup-form">
+                <input type="email" id="email" name="email" required placeholder="Email">
+                <button id="submit" class="get-started" type="submit">Sign Up</button>
+            </form>
+            
+            
+        </div>
+    </footer>
+
+    
+    
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents the form from submitting the traditional way
+    
+            // Get the email input value
+            const email = document.getElementById('email').value;
+    
+            // Validate the email (optional, since it's marked as required in HTML)
+            if (!email) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+    
+            // Construct the mailto link
+            const mailtoLink = `mailto:info@clads.io?subject=Sign%20Up&body=I%20would%20like%20to%20sign%20up%20with%20my%20email%3A%20${encodeURIComponent(email)}`;
+    
+            // Redirect to the mailto link
+            window.location.href = mailtoLink;
+        });
+        function prepareEmail() {
+            // Get form field values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const query = document.getElementById('query').value;
+    
+            // Validate the inputs (optional)
+            if (!name || !email || !phone || !subject || !query) {
+                alert('Please fill out all fields.');
+                return false; // Prevent form submission
+            }
+    
+            // Construct the mailto link with all the form data
+            const mailtoLink = `mailto:info@clads.io?subject=${encodeURIComponent(subject)}&body=Name: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0APhone: ${encodeURIComponent(phone)}%0D%0AQuery: ${encodeURIComponent(query)}`;
+    
+            // Redirect to the mailto link
+            window.location.href = mailtoLink;
+    
+            return false; // Prevent form from submitting the traditional way
+        }
+    </script>
+
+
+
+
+    <script src="script/script.js"></script>
+
+
+
+
+    <script>
+        function prepareEmail() {
+            // Helper function to sanitize user input using regex
+            function sanitizeInput(input) {
+                return input.replace(/<[^>]*>?/gm, '').trim(); // Remove HTML tags and extra spaces
+            }
+    
+            // Get the form data using plain JavaScript
+            const name = sanitizeInput(document.querySelector('input[name="name"]').value);
+            const email = sanitizeInput(document.querySelector('input[name="email"]').value);
+            const phone = sanitizeInput(document.querySelector('input[name="phone"]').value);
+            const subject = sanitizeInput(document.querySelector('input[name="subject"]').value);
+            const query = sanitizeInput(document.querySelector('textarea[name="query"]').value);
+    
+            // Basic validation for required fields
+            if (!name || !email || !phone || !subject || !query) {
+                alert("All fields are required.");
+                return false;
+            }
+    
+            // Validate email format
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+    
+            // Create the mailto URL with sanitized form data
+            const mailtoLink = "mailto:info@clads.io?subject=" + encodeURIComponent(subject) +
+                               "&body=" + encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + 
+                               "\nSubject: " + subject + "\n\n" + "Query: " + query);
+    
+            // Set the action of the form to the new mailto link
+            document.querySelector('form').setAttribute('action', mailtoLink);
+    
+            // Return true to allow form submission to proceed
+            return true;
+        }
+    </script>
+    
+
+
+</body>
+</html>
