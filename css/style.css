@@ -514,8 +514,8 @@ form  input,#submit{
     }
     .mbl-img{
         display: block;
-        height: 80px;
-        width: 80px;
+        height: 90px;
+        width: 890px;
         border-radius: 50%;
         overflow: hidden;
     }
